@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_variable</title>
+    <style>
+    :root{
+        --border-color: blanchedalmond;
+            
+       background-color:rgb(208, 127, 154) ;
+       color: aliceblue;
+       --secondary-color:rgb(174, 49, 70);
+    --secondary-background-color:rgb(57, 57, 215);
+    
+    }
+    h2{
+        color: var(--secondary-color);
+    }
+    table{
+        background-color: var(--secondary-background-color);
+      
+    }
+    #a{
+        background-color: var(--secondary-background-color);
+      color: var(color);
+      border: solid green 3px;
+      height: 80px;
+    }
+    </style>
+</head>
+<body>
+    <h2><i>This is a table</i></h2>
+    <table border="1">
+        <tr>
+            <th><b>s.no</b></th>
+            <th><b>name</b></th>
+            <th><b>salary</b></th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>john</td>
+            <th><b>30000<b></th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>raj</td>
+            <th><b>25000</b></th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>raj</td>
+            <th><b>20000</b></th>
+        </tr>
+         <tr>
+            <td>2</td>
+            <td>raj</td>
+            <th><b>15000</b></th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>raj</td>
+            <th><b>10000</b></th>
+        </tr>
+    </table>
+    <p>hii i am lavanya</p>
+    <p id="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+        Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p id="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+     Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>
+</body>
+</html>

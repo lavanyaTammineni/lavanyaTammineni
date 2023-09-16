@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AN INSPIRING DESIGN</title>
     <style>
+       
         .first_section{
          display: flex;
          min-height: 562px; 
          background-color: #FFCD9E;  
+         flex-wrap:  wrap;
+ 
         }
         .first_section input{
             border: solid 3px black; padding:8px 60px 8px 10px ; border-radius: 5px;
@@ -39,14 +42,14 @@ margin-left:5px;
         display: block;
         }
         .second_section_left_side{
-            width: 50%;
+            
             padding-left: 191px;
             list-style-type: none;
        }
        
         .second_section_right_side{
             text-align: right;
-            width: 50%;
+            
             
             padding-right: 193px;
             list-style-type: none;
@@ -76,7 +79,32 @@ margin-left:5px;
             padding-bottom: 56px;
             display: flex; 
             background-color: #282828; color:#FFFFFF;
+            justify-content: space-between;
         }
+         @media screen and (max-width:768px){
+           .first_section{
+            flex-direction:column-reverse;
+           }
+           .first_section_right_side img{
+           width: 350px;
+           }
+           .first_section_left_side{
+            padding: 20px;
+           }
+           .first_section_left_side button{
+            margin: 16px;
+           margin-left: 2px;
+           }
+           .second_section_left_side{
+             padding:20px ;
+           }
+           .second_section_right_side{
+            padding-right: 20px;
+           text-align: left;
+           margin-top: 35px;
+           } 
+         }
+        
           </style>
 </head>
 <body>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dappr Landing</title>
+    <style>
+      .main_container {
+        display: flex;
+
+        background: #fff;
+      }
+      .first_section {
+        background-color: #6f6af7;
+        display: flex;
+        height: 127px;
+        position: fixed;
+        z-index: 1;
+      }
+      .first_section h1 {
+        color: #ffffff;
+        padding-top: 27px;
+        padding-bottom: 37px;
+        padding-left: 40px;
+      }
+      .first_section ul {
+        list-style: none;
+        display: flex;
+        color: #ffffff;
+      }
+      .first_section ul a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .first_section ul li {
+        padding-left: 46px;
+        padding-top: 41px;
+        padding-bottom: 50px;
+      }
+
+      .first_section ul input {
+        border-radius: 63px;
+        background: #fff;
+        height: 46.605px;
+        width: 207px;
+      }
+
+      .first_section ul form {
+        padding-top: 36px;
+        padding-bottom: 34px;
+        padding-left: 243px;
+      }
+
+      .bars img {
+        margin-top: 36px;
+        margin-left: 49px;
+        padding-right: 34px;
+      }
+      .second_section {
+        display: flex;
+        padding-top: 209px;
+      }
+      .second_section img {
+        padding-right: 28px;
+        width: 300px;
+        padding-left: 65px;
+      }
+
+      .second_section textarea {
+        width: 599px;
+
+        background: #e5d8ff;
+
+        padding-left: 34px;
+        padding-top: 29px;
+        padding-right: 16px;
+        border-radius: 20px;
+        border: 6px solid #fff;
+
+        box-shadow: 3px 5px 27px 0px rgba(0, 0, 0, 0.25) inset;
+      }
+      .third_section {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        min-height: 64.481px;
+        color: #fff;
+        margin-top: 137px;
+        margin-bottom: 189px;
+        position: relative;
+        height: 14px;
+      }
+      .third_section div {
+        padding-top: 3px;
+        padding-right: 72px;
+        padding-bottom: 79.48px;
+        padding-left: 28px;
+      }
+      .third_container {
+        border-radius: 11px;
+      }
+      .question {
+        background: #929dff;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.4);
+      }
+      .total {
+        background: #734cf2;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.4);
+      }
+      .participants {
+        background: #d288ff;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.4);
+      }
+      .total_passed {
+        background: #000;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.4);
+      }
+      .third_section img {
+        position: absolute;
+        right: 0px;
+        top: 23px;
+        width: 126px;
+      }
+      .fourth_section {
+        margin-left: 34px;
+        position: relative;
+        border-radius: 21px;
+        background: #483eff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .fourth_section_left_side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .type_1 {
+        background: #bce0f6;
+        box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.39);
+      }
+      .type_2 {
+        padding-top: 14px;
+        padding-right: 49px;
+        padding-bottom: 12px;
+        padding-left: 30px;
+        border-radius: 10px;
+      }
+      span {
+        border: #fff solid 1px;
+        border-radius: 22px;
+        border: 2px solid #fff;
+        color: #fff;
+      }
+
+      .fourth_section_right_side {
+        padding-right: 70px;
+        padding-left: 25px;
+        height: 440px;
+        border-radius: 19px;
+        background: #fff;
+        margin-top: 31px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 669px;
+      }
+      .fourth_section_right_side p {
+        color: #04285a;
+      }
+      .fourth_section_right_side h2 {
+        color: #04285a;
+      }
+      .fourth_section_right_side button {
+        position: absolute;
+        bottom: 51px;
+        right: 106px;
+        background-color: #000;
+        color: #fff;
+        width: 104px;
+        border-radius: 9px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-right: 36px;
+      }
+      .fourth_section_right_side img {
+        position: absolute;
+        width: 21px;
+        padding-left: 4px;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        padding-left: 54px;
+        margin-top: 230px;
+        position: sticky;
+        top: 138px;
+        margin-bottom: 3px;
+      }
+      .right_side .whatsapp {
+        border: 3px solid black;
+        border-radius: 13px;
+        margin-bottom: 3px;
+      }
+      .right_side .facebook {
+        margin-bottom: 3px;
+      }
+      @media screen and (max-width: 768px) {
+        .second_section img {
+          width: 214px;
+          padding-left: 62px;
+        }
+        .second_section {
+          display: flex;
+          flex-direction: column;
+          padding-top: 141px;
+        }
+        .second_section textarea {
+          width: 257px;
+          padding-top: 17px;
+          height: 101px;
+          margin-left: 16px;
+        }
+        .third_section {
+          margin-top: 12px;
+          margin-bottom: 11px;
+          display: flex;
+          flex-direction: column;
+          height: auto;
+          max-width: 326px;
+          margin-left: 18px;
+        }
+        .third_section div {
+          padding-right: 10px;
+          padding-bottom: 5.48px;
+        }
+        .third_section .third_container {
+          margin-bottom: 9px;
+        }
+
+        .third_section img {
+          top: 320px;
+          right: -39px;
+        }
+        .fourth_section {
+          width: 310px;
+          display: flex;
+          flex-direction: column;
+        }
+        .fourth_section_left_side {
+          margin-top: 2px;
+        }
+        .fourth_section_right_side {
+          width: 215px;
+          height: auto;
+        }
+        .type_1 {
+          margin-top: 7px;
+        }
+        .type_2 {
+          margin-bottom: 6px;
+        }
+        .right_side {
+          width: 40px;
+          padding-left: 0px;
+        }
+        .fourth_section_right_side button {
+          right: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="left_side">
+        <div class="first_section">
+          <h1>Dappr</h1>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">More</a><img src="./dropdown.svg" /></li>
+            <form><input placeholder="Search...." /></form>
+            <div class="bars"><img src="./bars.svg" /></div>
+          </ul>
+        </div>
+        <div class="second_section">
+          <img src="./image 4.svg" />
+          <textarea>
+It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......</textarea
+          >
+        </div>
+        <div class="third_section">
+          <div class="question third_container">
+            <p>Question’s</p>
+            <p>200,000</p>
+          </div>
+          <div class="total third_container">
+            <p>Total Answer’s</p>
+            <p>105,000</p>
+          </div>
+          <div class="participants third_container">
+            <p>Participated</p>
+            <p>10,000</p>
+          </div>
+          <div class="total_passed third_container">
+            <p>Total Passed</p>
+            <p>6,000</p>
+          </div>
+          <img src="./Group 2.svg" />
+        </div>
+        <div class="fourth_section">
+          <div class="fourth_section_left_side">
+            <button class="type_1 type_2">YOUR INFO</button>
+            <span class="type_2">BOOKMARKS</span>
+            <span class="type_2">SETTINGS</span>
+          </div>
+          <div class="fourth_section_right_side">
+            <div>
+              <h2>Your information</h2>
+              <p>Name : Atul Singhal</p>
+              <p>Email : atul@gmail.com</p>
+              <p>Phone : +91 8131424888</p>
+              <p>Marks : 500.00</p>
+            </div>
+            <button type="button">Next<img src="./Arrow 1.svg" /></button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="right_side">
+          <img class="whatsapp" src="./logos_whatsapp-icon.svg" />
+          <img class="facebook" src="./Group 4.svg" />
+          <img src="./Group 3.svg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

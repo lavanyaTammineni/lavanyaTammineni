@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employee={
+           name:"john",
+            age:29,
+            id:2893,
+           salary:25000,
+           wayofcommunication: function wayofcomm(){
+                console.log("good communication");
+            }
+          }
+          console.log(employee);
+          console.log(employee.name);
+          const car=new Object({
+            name:"suzuki",
+            colour:"blue",
+            price:2000000
+          })
+          console.log(car)
+          employee.name="gani"
+          console.log(employee.name)
+          car.speciality="highspeed";
+          delete employee.id;
+          //shallow copy
+          const copyemployee=employee;
+          console.log(copyemployee);
+          copyemployee.salary=30000;
+         // const copycar1=car;
+         // console.log(copycar1);
+          //copycar1.price=1300000;
+          //deepcopy
+          const copycar={...car};
+          console.log(copycar);
+          copycar.price=1500000;
+          for(let key in employee){
+            console.log(key);
+          }
+          const entries=Object.entries(employee);{
+          console.log(entries)
+          }
+    </script>
+</body>
+</html>

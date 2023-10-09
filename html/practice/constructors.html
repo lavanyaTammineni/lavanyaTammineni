@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(name,eid,emailid,salary){
+            this.name=name;
+            this.eid=eid;
+            this.emailid=emailid;
+            this.salary=salary;
+            this.shoedetails=function(){
+                console.log(this);
+            }
+        }
+        const employee1=new Employee("gani",2001,"gani@gmail.com",10000);
+        const employee2=new Employee("john",2002,"john@gmail.com",15000);
+        const employee3=new Employee("dhoni",2003,"dhoni@gmail.com",20000);
+       // console.log(employee1,employee2,employee3);
+       //console.log(employee3.shoedetails.call(employee2));
+     
+       function person(firstname,lastname,phno){
+        return {
+        firstname :firstname,
+        lastname:lastname,
+        phno:phno,
+       fullname:firstname+lastname
+        };
+       };
+       const person1= person("lavanya","tammineni",123456789);
+      // console.log(person1.fullname);
+     
+        </script>
+</body>
+</html>
+

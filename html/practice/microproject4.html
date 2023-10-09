@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        #calculator{
+             width: 600px;
+             height: 416px;
+             background-color: #3B4664;
+             display: grid;
+             justify-content: space-around;
+         }
+        
+        #result_displaying{
+            height: 63px;
+            width: 201px;
+            background-color: #00000040;
+            text-align:right;
+           border-radius: 5px;
+           color: white;
+           
+        }
+       
+        #numbers_displaying{
+            border-radius: 5px;
+            margin-top: 12px;
+            background-color: #00000040;
+           display:grid;
+           
+           justify-content: space-around;
+           padding-bottom: 18px;
+           
+        }
+        input{
+            width: 38px;
+           border-radius: 5px;
+           height: 20px;
+           border-style: none;
+         margin-top: 10px;
+         padding-left: 10px;
+        }
+        #delete{
+            background-color: #3B4664;
+            color: aliceblue;
+        }
+        #reset{
+            width: 80px;
+            background-color: #3B4664;
+            color: aliceblue;
+        }
+      #result_is{
+        width: 80px;
+        background-color: red;
+        color: aliceblue;
+      }
+    p{
+      margin-top: 50px;
+      color:aliceblue;
+     }
+    
+       
+    </style>
+       
+           
+</head>
+<body>
+  
+    <div id="calculator">
+        <div> <p><b>calc</b></p><input   id="result_displaying"   disabled placeholder= 0 />
+            <div  id="numbers_displaying">
+              <div class="row1">  <input type="button" value=7 onclick="display(7)" >
+                <input type="button" value=8 onclick="display(8)">
+                <input type="button" value=9 onclick="display(9)">
+                <input type="button" value="DEL" onclick="del()" id="delete">
+            </div>
+            <div class="row2">
+                <input type="button" value=4 onclick="display(4)">
+                <input type="button" value=5 onclick="display(5)">
+                <input type="button" value=6 onclick="display(6)">
+               <input type="button" value="+" onclick="display('+')">
+               <div class="row3">
+                <input type="button" value=1 onclick="display(1)">
+                <input type="button" value=2 onclick="display(2)">
+                <input type="button" value=3 onclick="display(3)">
+                <input type="button" value="-" onclick="display('-')">
+               </div>
+               <div class="row4">
+                <input type="button" value="." onclick="display('.')">
+                <input type="button" value=0 onclick="display(0)">
+                <input type="button" value="/" onclick="display('/')">
+                <input type="button" value="x" onclick="display('*')">
+               </div>
+               <div class="row5">
+                <input type="button"  value="reset" onclick="resetting()" id="reset" >
+                <input type="button" value="=" onclick="calculate()" id="result_is">
+               </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+     function display(value){
+     document.getElementById("result_displaying").value +=value;
+    }  
+      
+    function calculate() {
+    var p = document.getElementById("result_displaying").value;
+    var q = eval(p);
+    document.getElementById("result_displaying").value = q;
+   }
+   function resetting() {
+   document.getElementById("result_displaying").value = "";
+   }
+   function del() {
+   var input = document.getElementById("result_displaying");
+   input.value = input.value.substring(0, input.value.length - 1);
+   }
+    </script>
+</body>
+</html>
